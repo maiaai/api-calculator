@@ -1,9 +1,14 @@
+from django.http import HttpResponse
 from rest_framework import viewsets, status
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 
 from calc_api.serializers import CalculatorSerializer
+
+
+def index(request):
+    return HttpResponse("Welcome to the calculator api.")
 
 
 class CalculatorViewSet(viewsets.ViewSet):

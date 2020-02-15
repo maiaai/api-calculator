@@ -17,6 +17,7 @@ For use of this API you need to perform next steps:
 1. `Create virtualenv with Python 3`
 2. `Clone this repo`
 3. `Install requirements: pip install -r requirements.txt`
+4. Run the server with `./manage.py runserver {port}`
 
 The root url is : `http://localhost:{port}/api/calc`
 Use Postman or CURL to make requests.
