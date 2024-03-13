@@ -13,7 +13,8 @@ def index(request):
 
 class CalculatorViewSet(viewsets.ViewSet):
     serializer_class = CalculatorSerializer
-    permission_classes = [AllowAny,]
+    permission_classes = [AllowAny,
+                          ]
 
     def create(self, request):
         serializer = CalculatorSerializer(data=request.data)

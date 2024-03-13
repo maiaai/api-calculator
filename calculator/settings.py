@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'calc_api.apps.CalcApiConfig',
+    'calc_api_v2',
 
     # locally installed apps
     'calculator',
