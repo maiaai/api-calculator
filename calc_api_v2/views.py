@@ -75,6 +75,5 @@ class CalculatorAPIView(APIView):
                 result = Calculator.calculate(first_number, second_number, operator)
                 return Response({"result": result}, status=status.HTTP_200_OK)
             except Exception as e:
-                import pdb;pdb.set_trace()
                 return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
