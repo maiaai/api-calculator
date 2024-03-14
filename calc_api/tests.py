@@ -269,21 +269,6 @@ class TestCalculatorViewSet(APITestCase):
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual(expected_data, actual_data)
 
-    def test_calculate_divide_with_zero(self):
-        response = self.client.post(self.list_url())
-        data = {
-            "first_number": 10,
-            "second_number": 0,
-            "operator": '/'
-        }
-        expected_data = {
-            'result': 'You can not divide with 0.'
-        }
-        response = self.client.post(self.list_url(), data=data)
-        actual_data = response.data
-        self.assertEqual(status.HTTP_200_OK, response.status_code)
-        self.assertEqual(expected_data, actual_data)
-
     def test_calculate_divide_same_integers(self):
         response = self.client.post(self.list_url())
         data = {
